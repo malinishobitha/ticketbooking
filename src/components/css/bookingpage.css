@@ -1,0 +1,189 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup {
+  background-color: yellow;
+  color: black;
+}
+
+.signin {
+  background-color: transparent;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+  .movietime {
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    border: 0px solid black;
+}
+
+.movietime .time {
+    border: 1px solid rgb(63, 63, 63);
+    width: 100px;
+    line-height: 0px; /* Adjust line-height to center text */
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Optional for smooth transition */
+}
+
+.movietime .time:hover {
+    background-color: rgb(242, 114, 114); 
+}
+
+.movietime .time:active {
+    background-color: rgb(202, 84, 84);
+}
+.seat-info{
+  display: flex;
+  width: 350px;
+  justify-content: space-evenly;
+}
+.seat-info button{
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    border-radius: 3px;
+    
+}
+.movieticket{
+    display: flex;
+    justify-content: space-between;
+}
+.movieticket .seat{
+    display: flex;
+    border: 0px solid black;
+    width: 380px;
+    justify-content: space-between;
+}
+.available{
+    border: 1px solid aqua;
+}
+.booked{
+    background-color: gray;
+    border: none;
+}
+.selected{
+    background-color: rgb(4, 87, 160);
+    border: none;
+}
+.seat-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.seat-row {
+  display: grid;
+  grid-template-columns: auto repeat(14, 1fr) auto; /* Align row labels and seats */
+  gap: 5px;
+  align-items: center;
+}
+
+.row-label {
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.seat {
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid aqua;
+  background-color: white;
+  cursor: pointer;
+}
+
+.booked {
+  background-color: gray !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.selected {
+  background-color: rgb(4, 87, 160) !important;
+  color: white;
+}
+.column-gap {
+  width: 15px; /* Adjust this value to increase/decrease space */
+}
+
+.seat-row {
+  display: grid;
+  grid-template-columns: auto repeat(7, 1fr) 15px repeat(7, 1fr) auto; 
+  gap: 5px;
+  align-items: center;
+}
+.ticket{
+  display: flex;
+}
+.ticket p{
+  padding: 8px;
+}
+
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.container h5{
+  text-align: center;
+}
+.total-price a button {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 20px auto;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: #ff5733;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.total-price a{
+  text-decoration: none;
+}
+.book-button:hover {
+  background: #ff2e00;
+}
+.total-price{
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,310 @@
+.body {
+  width: 90%;
+  background-color: white;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+}
+.container {
+  width: 90%;
+  background-color: white;
+  padding: 20px;
+  margin-left: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup {
+  background-color: yellow;
+  color: black;
+}
+
+.signin {
+  background-color: transparent;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.movie-details {
+  display: flex;
+  margin-top: 20px;
+}
+
+.movie-poster {
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info {
+  margin-left: 20px;
+}
+
+.movie-meta {
+  color: gray;
+}
+
+.movie-description {
+  margin-top: 10px;
+}
+
+.buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.watch-trailer {
+  background-color: red;
+  color: white;
+}
+
+.booking {
+  background-color: pink;
+  color: white;
+}
+
+.reviews {
+  border: 1px solid gray;
+  color: gray;
+  background-color: white;
+}
+
+.date-selection {
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dates {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.date-button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.date-button:hover {
+  background-color: yellow;
+}
+.navoption{
+  border: 0px solid black;
+  display: flex;
+  background-color:rgb(236, 195, 31);
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.filter-option{ 
+  display: flex;
+  justify-content: space-between;
+  border: 0px solid black;
+  width:500px;
+  padding:10px; 
+  }
+.filter-option select{
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+
+}
+.navoption button{
+   margin: 20px;
+   height: 30px;
+   border:none;
+   background-color:white;
+   padding:10px;
+   border-radius: 5px;
+}
+.search-theater {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-theater input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.search-theater input:focus {
+  border-color: #f8b400;
+  outline: none;
+}
+
+/* Theatre List Section */
+.theatre-list {
+  margin-top: 20px;
+}
+
+.theatre-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theatre-item strong {
+  font-size: 18px;
+  color: #333;
+}
+
+.theatre-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* No results message */
+.theatre-list p {
+  font-size: 16px;
+  font-style: italic;
+  color: #999;
+}
+/* Footer styles */
+.footer {
+  background-color: #303044;
+  color: white;
+  padding: 40px 0;
+  margin-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links,
+.browser,
+.browse {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+}
+
+.footer-links h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.footer-links h5 {
+  font-size: 16px;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+.footer-links img {
+  width: 150px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.browser h2, .browse h2 {
+  font-size: 24px;
+
+}
+
+.browser p, .browse p {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 8px;
+}
+
+.footer-links p,
+.browser p,
+.browse p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.footer-links p:hover,
+.browser p:hover,
+.browse p:hover {
+  color: #f8b400;
+  cursor: pointer;
+}
+.timingdiv{
+  display: flex;
+  justify-content: space-around;
+  max-width: 400px;
+  text-align: center;
+}
+.timing{
+  border: 1px solid rgb(106, 102, 102);
+  width: 100px;
+  line-height: 0.4px;
+  border-radius: 5px;
+}
+/* Basic Styling for Links */
+.link {
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Active Link */
+.link:active {
+  color: #004085; /* Darker color when clicked */
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links, .browser, .browse {
+    text-align: center;
+    margin: 15px 0;
+  }
+}
