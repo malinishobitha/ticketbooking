@@ -1,4 +1,4 @@
-/* ticketInformation.css */
+
   
   .ticket-page {
     text-align: center;
@@ -15,7 +15,7 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     margin-top: 20px;
-    margin-left: 400px;
+    margin:auto;
   }
   
   .ticket {
@@ -82,4 +82,10 @@
     cursor: pointer;
     border-radius: 5px;
   }
-  
+  @media (max-width: 380px){
+  .ticket-container{
+    font-size: 14x;
+     border: 0px solid black;
+     width: 80%;
+  }
+  }

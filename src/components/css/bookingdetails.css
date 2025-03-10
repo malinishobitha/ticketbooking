@@ -1,14 +1,4 @@
-/* General Styles */
 
-  
-  .bookingPage {
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  /* Navbar */
-  
   /* Container */
   .container {
     margin-top: 20px;
@@ -105,7 +95,6 @@
     background-color:rgb(242, 114, 114);
   }
   
-  /* Payment Summary */
   .paymentdetails p {
     font-size: 16px;
     font-weight: bold;
@@ -115,16 +104,49 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .details {
-      width: 100%;
-    }
-    
-    .Yourcard-container {
-      flex-direction: column;
+      width: 90%;
     }
     
     .cartdetails, .paymentdetails {
-      width: 100%;
+      width: 50%;
       margin-bottom: 15px;
     }
+    .cartdetails input{
+      width: 80%;
+    }
+    .container{
+      width:100%;
+    }
   }
-  
+  @media (max-width: 480px) {
+    .details {
+      width: 90%;
+    }
+    .Yourcard-container{
+      width: 80%;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cartdetails, .paymentdetails {
+      width: 50%;
+      margin-bottom: 15px;
+      border: 0px solid black;
+    }
+    .cartdetails input{
+      width: 80%;
+    }
+    .container{
+      width:95%;
+    }
+  }
+  @media (max-width: 380px){
+    .details{
+      display: flex;
+      flex-direction: column;
+    }
+    .Yourcard-container{
+      width: 80%;
+      margin-left: 20px;
+    }
+  }
+ 

@@ -48,10 +48,10 @@
 .movietime .time {
     border: 1px solid rgb(63, 63, 63);
     width: 100px;
-    line-height: 0px; /* Adjust line-height to center text */
+    line-height: 0px; 
     text-align: center;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Optional for smooth transition */
+    transition: background-color 0.3s ease; 
 }
 
 .movietime .time:hover {
@@ -61,20 +61,44 @@
 .movietime .time:active {
     background-color: rgb(202, 84, 84);
 }
-.seat-info{
+.seat-info {
   display: flex;
-  width: 350px;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /*  Space between seat types */
+  flex-wrap: wrap; /*  Ensures responsiveness */
 }
-.seat-info button{
-    width: 20px;
-    height: 20px;
-    margin-top: 15px;
-    border-radius: 3px;
-    
+
+.seat-status {
+  display: flex;
+  align-items: center; /* Align button and text properly */
+  gap: 5px;
+}
+
+.seat-info button {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  
+}
+
+.available {
+  border: 1px solid aqua;
+  background-color: white;
+}
+
+.booked {
+  background-color: gray;
+  border: none;
+}
+
+.selected {
+  background-color: rgb(4, 87, 160);
+  color: white;
+  border: none;
 }
 .movieticket{
-    display: flex;
+     display: flex;
     justify-content: space-between;
 }
 .movieticket .seat{
@@ -83,17 +107,7 @@
     width: 380px;
     justify-content: space-between;
 }
-.available{
-    border: 1px solid aqua;
-}
-.booked{
-    background-color: gray;
-    border: none;
-}
-.selected{
-    background-color: rgb(4, 87, 160);
-    border: none;
-}
+
 .seat-layout {
   display: flex;
   flex-direction: column;
@@ -104,7 +118,7 @@
 
 .seat-row {
   display: grid;
-  grid-template-columns: auto repeat(14, 1fr) auto; /* Align row labels and seats */
+  grid-template-columns: auto repeat(14, 1fr) auto; 
   gap: 5px;
   align-items: center;
 }
@@ -137,7 +151,7 @@
   color: white;
 }
 .column-gap {
-  width: 15px; /* Adjust this value to increase/decrease space */
+  width: 15px;
 }
 
 .seat-row {
@@ -186,4 +200,104 @@
 .total-price{
   display: flex;
   justify-content: space-between;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 5px 15px;
+  }
+
+  .auth-buttons {
+    justify-content: center;
+  }
+
+  .movietime {
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .seat-row {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggler {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .movieticket{
+    justify-content: space-evenly;
+    border: 0px solid black;
+  }
+  .nav-links a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+
+  .movietime {
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+  }
+
+  .seat-row {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .total-price {
+    flex-direction: column;
+    align-items: center;
+  }
+  .seat-info{
+    flex-direction: column;
+    padding: 20px;
+    border: 0px solid black;
+  }
+}
+
+@media (max-width: 480px) {
+  .movietime {
+    flex-direction: column;
+  }
+
+  .seat-row {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .total-price {
+    flex-direction: column;
+    align-items: center;
+  }
 }

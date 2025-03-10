@@ -3,18 +3,20 @@ import "./css/home.css";
 import moviePoster from "./images/download.jpeg";
 import iconImages from "./images/iconsimage.png";
 import { Link } from 'react-router-dom';
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; 
 
 const Home = () => {
-  // Separate states for each dropdown
+
+  const [menuOpen, setMenuOpen] = useState(false); 
   const [language, setLanguage] = useState("None");
   const [format, setFormat] = useState("None");
   const [price, setPrice] = useState("None");
   const [showtime, setShowtime] = useState("None");
   
-  // State for search input
+
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Sample theatres with their addresses
+  
   const theatres = [
     {
       name: "Inox The Marina, OMR, Chennai",
@@ -28,22 +30,22 @@ const Home = () => {
     {
       name: "PVR Theyagaraja Thiruvanmiyur Chennai",
       address: "60 LB rd, Ranganatha Puram Chennai",
-      timings: [] // No timings
+      timings: []
     },
     {
       name: "PVR Sathyam Royapettah Chennai",
       address: "8,Thiru Vi ka Rd, Royapettah, Chennai-6000014",
-      timings: [] // No timings
+      timings: [] 
     },
     {
       name: "PVR SKLS Galaxy Mall, Red Hills Chennai",
       address: "PVR Limited, Survey N0.93/1C/2B,GNT Road,Hills, Chennai - 600",
-      timings: [] // No timings
+      timings: []
     },
     {
       name: "Big Cinemas",
       address: "Big Mall, Delhi",
-      timings: [] // No timings
+      timings: []
     }
   ];
   
@@ -62,7 +64,6 @@ const Home = () => {
     );
   }
 
-  // Handle select dropdown changes
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);
   };
@@ -79,12 +80,10 @@ const Home = () => {
     setShowtime(event.target.value);
   };
 
-  // Handle search input change
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  // Filter theatres based on search query
   const filteredTheatres = theatres.filter((theatre) =>
     theatre.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     theatre.address.toLowerCase().includes(searchQuery.toLowerCase())
@@ -92,20 +91,28 @@ const Home = () => {
 
   return (
     <div className="booking-box">
-      {/* Navbar */}
       <nav className="navbar">
         <span className="logo">Logo Name</span>
-        <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Movies</a>
-          <a href="#">Offers</a>
-          <a href="#">Contact Us</a>
+
+        {/* Toggler Button with Icons */}
+        <button className="menu-toggler" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />} 
+        </button>
+
+        {/* Navbar Links */}
+        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <Link to="/">Home</Link>
+          <Link to="/movies">Movies</Link>
+          <Link to="/offers">Offers</Link>
+          <Link to="/contact">Contact Us</Link>
         </div>
+
         <div className="auth-buttons">
           <button className="signup">Signup</button>
           <button className="signin">Sign In</button>
         </div>
       </nav>
+  
 
       <div className="container">
         {/* Movie Details */}
@@ -127,7 +134,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Date Selection */}
         <div className="date-selection">
           <h3>Select a date</h3>
           <div className="dates">
@@ -140,12 +146,10 @@ const Home = () => {
             )}
           </div>
 
-          {/* Filter Options */}
           <div className="navoption">
             <div className="filter-option">
               <p>Filters:</p>
 
-              {/* Language Select */}
               <select value={language} onChange={handleLanguageChange}>
                 <option value="None" disabled>
                   Tamil
@@ -155,7 +159,7 @@ const Home = () => {
                 <option value="Option 3">Option 3</option>
               </select>
 
-              {/* Format Select */}
+        
               <select value={format} onChange={handleFormatChange}>
                 <option value="None" disabled>
                   Formats
@@ -165,7 +169,7 @@ const Home = () => {
                 <option value="Option 3">Option 3</option>
               </select>
 
-              {/* Price Select */}
+            
               <select value={price} onChange={handlePriceChange}>
                 <option value="None" disabled>
                   Price
@@ -175,7 +179,7 @@ const Home = () => {
                 <option value="Option 3">Option 3</option>
               </select>
 
-              {/* Showtime Select */}
+              
               <select value={showtime} onChange={handleShowtimeChange}>
                 <option value="None" disabled>
                   Show time
@@ -186,12 +190,12 @@ const Home = () => {
               </select>
             </div>
 
-            {/* Reset Button */}
+          
             <button>Reset</button>
           </div>
         </div>
 
-        {/* Search Theatre */}
+       
         <div className="search-theater">
           <input
             type="text"
@@ -201,7 +205,6 @@ const Home = () => {
           />
         </div>
 
-        {/* Display filtered theatres with addresses and timings */}
         <div className="theatre-list">
           {filteredTheatres.length > 0 ? (
             filteredTheatres.map((theatre, index) => (

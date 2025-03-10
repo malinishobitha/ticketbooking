@@ -1,22 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import "./css/ticketInformation.css";
 import moviePoster from "./images/download.jpeg";
+import { Link } from 'react-router-dom';
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; 
+
 const TicketConfirmation = () => {
+    const [menuOpen, setMenuOpen] = useState(false); 
+  
   return (
     <div className="ticket-page">
-          <nav className="navbar">
-        <span className="logo">Logo Name</span>
-        <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Movies</a>
-          <a href="#">Offers</a>
-          <a href="#">Contact Us</a>
-        </div>
-        <div className="auth-buttons">
-          <button className="signup">Signup</button>
-          <button className="signin">Sign In</button>
-        </div>
-      </nav>
+               <nav className="navbar">
+                  <span className="logo">Logo Name</span>
+          
+                  {/* Toggler Button with Icons */}
+                  <button className="menu-toggler" onClick={() => setMenuOpen(!menuOpen)}>
+                    {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />} 
+                  </button>
+          
+                  {/* Navbar Links */}
+                  <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+                    <Link to="/">Home</Link>
+                    <Link to="/movies">Movies</Link>
+                    <Link to="/offers">Offers</Link>
+                    <Link to="/contact">Contact Us</Link>
+                  </div>
+          
+                  <div className="auth-buttons">
+                    <button className="signup">Signup</button>
+                    <button className="signin">Sign In</button>
+                  </div>
+                </nav>
       <div className="ticket-container">
         <div className="ticket">
           <img src={moviePoster} alt="Movie Poster" className="movie-poster" />
