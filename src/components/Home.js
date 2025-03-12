@@ -102,15 +102,15 @@ const Home = () => {
         {/* Navbar Links */}
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <Link to="/">Home</Link>
-          <Link to="/movies">Movies</Link>
-          <Link to="/offers">Offers</Link>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/">Movies</Link>
+          <Link to="/">Offers</Link>
+          <Link to="/">Contact Us</Link>
         </div>
 
         <div className="auth-buttons">
           <button className="signup">Signup</button>
-          <button className="signin">Sign In</button>
-        </div>
+          <Link to="/Signin"><button className="Signin">Sign In</button></Link>
+          </div>
       </nav>
   
 
